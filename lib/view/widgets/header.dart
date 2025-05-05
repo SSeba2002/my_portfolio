@@ -69,12 +69,35 @@ class HeaderWidget extends StatelessWidget {
 
               Row(
                 children: [
-                  _buildSocialIcon(
-                    icon: Icons.email,
-                    color: Colors.grey.shade300,
-                    onTap: () => _launchUrl('sebaramzi5@gmail.com'),
-                    tooltip: 'email'
+                  Padding(
+                    padding: const EdgeInsets.only(right: 12),
+                    child: InkWell(
+                      onTap: () => _launchUrl('mailto:sebaramzi5@gmail.com'),
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: Colors.blue.shade200,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.email, color: Colors.grey.shade300, size: 20),
+                            const SizedBox(width: 8),
+                            SelectableText(
+                              'sebaramzi5@gmail.com',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
+
                   _buildSocialIcon(
                     icon: Icons.link,
                     color: Colors.blue.shade200,
@@ -89,6 +112,7 @@ class HeaderWidget extends StatelessWidget {
                   _buildSocialIcon(
                     image: 'assets/icons/linkedin.png',
                     onTap: () => _launchUrl('https://www.linkedin.com/in/seba-ramzi-536307318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'),
+                      tooltip: 'linkedin'
                   ),
                 ],
               ),
