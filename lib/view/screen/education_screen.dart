@@ -40,7 +40,7 @@ class EducationScreen extends StatelessWidget {
                   Text(
                     '2020 - 2024',
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 15,
                       color: Colors.grey.shade500,
                     ),
                   ),
